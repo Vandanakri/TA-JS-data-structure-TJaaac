@@ -2,9 +2,7 @@
 
 //  - Create a variable named `character` using `let` assign a value of empty object.
 
- let character = {
-
- }
+ let character = {};
 
 
 //  - Go to this [Arya Stark](https://awoiaf.westeros.org/index.php/Arya_Stark)
@@ -65,7 +63,7 @@ character.greet = function(){
 
 // - Check by calling `greet` and see if the message changed or not.
 
-character.greet()
+character.greet();
 
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
 
@@ -74,6 +72,11 @@ character.greet()
   } else {
     character.isAdult = false;
   }
+
+
+
+character.isAdult = character.age > 18 ? true : false;
+
 
 
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
@@ -85,6 +88,12 @@ character.changeIsAdult=function(){
          return character.isAdult = true;
        }
 }
+
+
+character.changeIsAdult = function() {
+  character.isAdult = !character.isAdult
+};
+
 
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
@@ -102,12 +111,9 @@ console.log(character["42"]);
 
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
 
-
 character.totalSeasons =  1 + 2 + 3 + 2
   
-
-
 // - Access the value of the key `totalSeason` (it should be 8)
 
-character.totalSeasons
+console.log(character.totalSeasons);
 
