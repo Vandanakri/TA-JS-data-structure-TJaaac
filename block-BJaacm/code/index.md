@@ -18,18 +18,20 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // output will be true because the both value will be same and store in same address.
+- `user === newUser;` // output will be true because the both value and data type will be same.
+- `user.name === newUser.name;` // output will be true because the both value and data type will be same.
+- `user.name == newUser.name;`// output will be true because the both value will be same.
+- `user.sibling == newUser.sibling;` // output will be true because the both value will be same.
+- `user.sibling === newUser.sibling;` // output will be true because the both value and data type will be same.
+- `user.sibling == allBrothers;` // output will be false because the value will be not same.
+- `user.sibling === allBrothers;` // output will be false because the value will be not same.
+- `brothersCopy === allBrothers;` // output will be false because the value will be not same.
+- `brothersCopy == allBrothers;` // output will be false because the value will be not same.
+- `brothersCopy == user.sibling;` // output will be true because the both value will be same.
+- `brothersCopy === user.sibling;` // output will be true because the both value will be same.
+- `brothersCopy[0] === user.sibling[0];` // output will be true because the both value will be same.
+- `brothersCopy[1] === user.sibling[1];` // output will be true because the both value will be same.
+- `user.sibling[1] === newUser.sibling[1];`// output will be true because the both value will be same.
+
+
