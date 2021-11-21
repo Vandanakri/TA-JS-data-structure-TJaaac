@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output will be Arya becoz person2 = person hence person2.firstName will be value Arya.
+console.log(person.firstName); // output will be Arya becoz below the code has declear (person.firstName = 'Arya';).
+console.log(person.lastName); // output will be Doe because lastName is 'Doe'.
+console.log(person == person2); // output will be true because person and person2 has same value.
+console.log(person === person2); // output will be true because person and person2 has same value.
+console.log(person.lastName === person2.lastName); // output will be true because person.lastName and person2.lastName has same value.
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output will be John because decler below the code personTwo = person and person = firstName is 'John'.
+console.log(person.firstName); // output will be Arya becoz the (person.firstName) is the second value will be 'Arya'.
+console.log(personTwo.lastName); // output will be Doe.
+console.log(person.firstName === personTwo.firstName); // output will be false because the both value are no same.
+console.log(person == personTwo); // output will be false because the spret oparator will be firstName and  lastName.
+console.log(person === personTwo); // output will be false because the spret oparator will be firstName and  lastName.
+console.log(person.address === personTwo.address); // output will be true because the new update personTwo.address is the same value of person.address.
+console.log(person.address == personTwo.address); // output will be true because the new update personTwo.address is the same value of person.address.
+console.log(personTwo.address.city); // output will be San Jose.
+console.log(person.address.city); // output will be San Jose. 
+console.log(person.address.city == personTwo.address.city); // output will be true.
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output will be John.
+console.log(person.firstName); // output will be Arya because the name will be update.
+console.log(personTwo.lastName); // output will be Doe.
+console.log(person.firstName === personTwo.firstName); // output wll be false.
+console.log(person == personTwo); // output will be false.
+console.log(person === personTwo); // output will be false.
+console.log(person.address === personTwo.address); // output will be false
+console.log(person.address == personTwo.address); // output will be false
+console.log(personTwo.address.city); // output will be San Jose.
+console.log(person.address.city); // output will be San Jose.
+console.log(person.address.city == personTwo.address.city); // output will be true.
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,6 +104,8 @@ let blogs = [
 ];
 
 // Your code goes here
+
+let clonedBlogs = [{ ...blogs[0] }, { ...blogs[1] }, { ...blogs[2] }];
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -129,6 +131,8 @@ var questions = [
 ];
 
 // Your code goes here
+
+let questionClone = [{ ...questions[0]}, { ...questions[1]}];
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -156,6 +160,12 @@ var allBlogs = {
 };
 
 // Your code goes here
+
+
+let allBlogsClone = { ...allBlogs, 
+author: { ...allBlogs.author}, 
+comments: [{ ...allBlogs.comments[0]}, { ...allBlogs.comments[1]}] ,};
+
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -189,6 +199,10 @@ let person = [
 ];
 
 // Your code goes here
+
+let clonedPerson = [{ ...person[0]}, { ...person[1]}, { ...person[2]}, { ...person[3]},
+output: { ...person.output}
+ ,]
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
@@ -231,3 +245,4 @@ console.log(
   }`
 );
 ```
+
