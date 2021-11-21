@@ -132,7 +132,12 @@ var questions = [
 
 // Your code goes here
 
-let questionClone = [{ ...questions[0]}, { ...questions[1]}];
+let questionClone = [
+  { ...questions[0], responses:[
+   ...questions[0].responses ]},
+   { ...questions[1], responses:[
+   ...questions[1].responses ]}
+]
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -162,9 +167,16 @@ var allBlogs = {
 // Your code goes here
 
 
-let allBlogsClone = { ...allBlogs, 
-author: { ...allBlogs.author}, 
-comments: [{ ...allBlogs.comments[0]}, { ...allBlogs.comments[1]}] ,};
+let allBlogsClone = 
+{ ...allBlogs, 
+author: { 
+  ...allBlogs.author}, 
+
+comments: [
+  { ...allBlogs.comments[0]},
+  { ...allBlogs.comments[1]} ,
+  ]
+}
 
 ```
 
@@ -200,16 +212,15 @@ let person = [
 
 // Your code goes here
 
-let clonedPerson = [{ ...person[0]}, { ...person[1]}, { ...person[2]}, { ...person[3]},
-output: { ...person.output}
- ,]
+let clonePerson = JSON.parse(JSON.stringify(person));
+
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(obj) {
+  return JSON.person(JSON.stringify(obj));
 }
 
 // Run the test below to check your function
@@ -245,4 +256,5 @@ console.log(
   }`
 );
 ```
+
 
