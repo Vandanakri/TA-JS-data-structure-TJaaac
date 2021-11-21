@@ -118,7 +118,7 @@ for (let house of got.houses) {
 let allPeople = [];
 for (let house of got.houses) {
   for (let people of house.people) {
-    console.log(people.name);
+    allPeople.push(people.name);
   }
 }
 
@@ -132,7 +132,7 @@ console.log(allPeople, allPeople.length);
 let allDescription = [];
 for (let house of got.houses) {
   for (let people of house.people) {
-    console.log(people.description);
+    allDescription.push(people.description);
   }
 }
 
@@ -142,7 +142,7 @@ console.log(allDescription, allDescription.length);
 
 // 20. Only the the description whose length is more than 30. (use .length property on string to get the length)
 
-for (let description of allPeopleDescription) {
+for (let description of allDescription) {
   if (description.length > 30) {
     console.log(description);
   }
