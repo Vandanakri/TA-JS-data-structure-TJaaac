@@ -11,7 +11,7 @@
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
 
 
-  character.name = "Arya"
+   character = {charecterName: "Arya"};
 
 
 
@@ -19,7 +19,7 @@
 
 let age = 20;
 
-  character.age = age;
+  character["character-age"] = age;
 
 
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
@@ -39,7 +39,7 @@ let age = 20;
 
 
 character.greet = function(){
-  alert (`I am ${character.name} and my title is ${character.title}`);
+  alert (`I am ${character.charecterName} and my title is ${character.title}`);
 }
 
 
@@ -67,11 +67,13 @@ character.greet();
 
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
 
+
   if( character.age > 18){
     character.isAdult = true;
   } else {
     character.isAdult = false;
   }
+
 
 
 
@@ -116,4 +118,5 @@ character.totalSeasons =  1 + 2 + 3 + 2
 // - Access the value of the key `totalSeason` (it should be 8)
 
 console.log(character.totalSeasons);
+
 
