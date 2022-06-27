@@ -6,13 +6,13 @@ let numbers = [1, 2, 3, 4, 5];
 
 let sum = 0
 for (let number of numbers) {
-  sum = sum + numbers;
+  sum =+ number;
 }
 console.log(sum);
 
 // 3. Calculate the average of array items and print it to the console using console.log()
 
-let sum = 0;
+let sum2 = 0;
 let average = 0;
 for (let number of numbers) {
   sum = sum + number;
@@ -20,12 +20,8 @@ for (let number of numbers) {
 }
 console.log(average);
 
-
-
-console.log(sum / numbers.length);
-
 // 4. Find the highest number in the array and print it to the console using console.log()
-let highestNumber = number[0];
+let highestNumber = numbers[0];
 for (let number of numbers) {
   if (number > highestNumber) {
     highestNumber = number;
@@ -33,7 +29,7 @@ for (let number of numbers) {
 }
 console.log(highestNumber);
 // 5. Find the lowest number in the array and print it to the console using console.log()
-let lowestNumber = number[0];
+let lowestNumber = numbers[0];
 for (let number of numbers) {
   if (number < lowestNumber) {
     lowestNumber = number;
